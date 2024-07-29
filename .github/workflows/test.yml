@@ -31,7 +31,7 @@ jobs:
           then
           for ((attempt=1;attempt<=${BUSSINESSKEY};++attempt))
           do
-          python3 main.py --chrome --business-key
+          python3 main.py --chrome --business-key --skip-webdriver-menu --skip-update-check --no-logo
           done
           echo -e "\nBUSSINESSKEY generated:" >> $GITHUB_STEP_SUMMARY
           cat ./*ACCOUNTS.txt >> $GITHUB_STEP_SUMMARY
